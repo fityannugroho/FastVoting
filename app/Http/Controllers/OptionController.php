@@ -51,14 +51,14 @@ class OptionController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @param  \App\Models\Event $event The event that the option belongs to.
+     * @param  \App\Models\Event  $event The event that the option belongs to.
      * @return \Illuminate\Http\Response
      */
     public function create(Event $event)
     {
         $this->authorize('create', [Option::class, $event]);
 
-        $data['title'] = 'Add New Option | ' . config('app.name');
+        $data['title'] = 'Add New Option | '.config('app.name');
         $data['event'] = $event;
 
         return view('pages.option-add', $data);
@@ -67,8 +67,8 @@ class OptionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\OptionPostRequest $request The request that contains the option data.
-     * @param  \App\Models\Event $event The event that the option belongs to.
+     * @param  \App\Http\Requests\OptionPostRequest  $request The request that contains the option data.
+     * @param  \App\Models\Event  $event The event that the option belongs to.
      * @return \Illuminate\Http\Response
      */
     public function store(OptionPostRequest $request, Event $event)
@@ -88,7 +88,7 @@ class OptionController extends Controller
         // Upload image.
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time() . '_' . $image->hashName();
+            $imageName = time().'_'.$image->hashName();
             $path = $image->storeAs(Option::IMAGE_STORAGE_PATH, $imageName);
 
             if (empty($path)) {
@@ -105,7 +105,6 @@ class OptionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function show(Option $option)
@@ -116,12 +115,11 @@ class OptionController extends Controller
     /**
      * Show the form for editing the specified option.
      *
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function edit(Option $option)
     {
-        $data['title'] = 'Edit Option | ' . config('app.name');
+        $data['title'] = 'Edit Option | '.config('app.name');
         $data['option'] = $option;
         $data['event'] = $option->event;
 
@@ -131,8 +129,7 @@ class OptionController extends Controller
     /**
      * Update the specified option in storage.
      *
-     * @param  \App\Http\Requests\OptionPostRequest $request The request that contains the option data.
-     * @param  \App\Models\Option $option
+     * @param  \App\Http\Requests\OptionPostRequest  $request The request that contains the option data.
      * @return \Illuminate\Http\Response
      */
     public function update(OptionPostRequest $request, Option $option)
@@ -143,7 +140,7 @@ class OptionController extends Controller
         if ($request->hasFile('image')) {
             // Delete image old image if exists.
             if (isset($option->image_location)) {
-                $imagePath = storage_path('app/' . Option::IMAGE_STORAGE_PATH . '/' . $option->image_location);
+                $imagePath = storage_path('app/'.Option::IMAGE_STORAGE_PATH.'/'.$option->image_location);
 
                 if (file_exists($imagePath)) {
                     unlink($imagePath);
@@ -152,7 +149,7 @@ class OptionController extends Controller
 
             // Upload the new image.
             $image = $request->file('image');
-            $imageName = time() . '_' . $image->hashName();
+            $imageName = time().'_'.$image->hashName();
             $path = $image->storeAs(Option::IMAGE_STORAGE_PATH, $imageName);
 
             if (empty($path)) {
@@ -163,7 +160,7 @@ class OptionController extends Controller
         }
 
         // Update the option and return error message if failed.
-        if (!$option->update($validatedData)) {
+        if (! $option->update($validatedData)) {
             return redirect()->back()->with('error', 'Failed updating option.')->withInput();
         }
 
@@ -173,13 +170,12 @@ class OptionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Http\Response
      */
     public function destroy(Option $option)
     {
         // Delete the option and return error message if failed.
-        if (!$option->delete()) {
+        if (! $option->delete()) {
             return redirect()->route('events.show', ['event' => $option->event])->with('error', 'Failed deleting option.');
         }
 
@@ -189,8 +185,7 @@ class OptionController extends Controller
     /**
      * Get the option image.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \App\Models\Option $option The option that the image belongs to.
+     * @param  \App\Models\Option  $option The option that the image belongs to.
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
     public function getImage(Request $request, Option $option)
@@ -199,9 +194,9 @@ class OptionController extends Controller
         $this->authorize('getImage', [Option::class, $option, $request]);
 
         // Verify if the image exists.
-        $path = storage_path('app/' . Option::IMAGE_STORAGE_PATH . '/' . $option->image_location);
+        $path = storage_path('app/'.Option::IMAGE_STORAGE_PATH.'/'.$option->image_location);
 
-        if (!file_exists($path)) {
+        if (! file_exists($path)) {
             abort(404, 'Image may have been moved or deleted');
         }
 

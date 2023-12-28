@@ -36,7 +36,7 @@ class Voter extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-        'token'
+        'token',
     ];
 
     /**
@@ -45,7 +45,7 @@ class Voter extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'created_at' => 'datetime'
+        'created_at' => 'datetime',
     ];
 
     /**
@@ -81,6 +81,7 @@ class Voter extends Model
     private function generateToken()
     {
         $this->token = \Illuminate\Support\Str::random(100);
+
         return $this->save();
     }
 
@@ -95,6 +96,7 @@ class Voter extends Model
         if ($this->generateToken()) {
             // Send email to the voter.
             $pendingMail = Mail::to($this->email);
+
             return $pendingMail->send(new VotingInvitation($this)) !== null;
         }
 

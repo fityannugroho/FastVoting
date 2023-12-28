@@ -85,6 +85,7 @@ class Event extends Model
     public function isAuthorized(?User $user = null)
     {
         $user = $user ?? auth()->user();
+
         return $this->user_id === $user->id;
     }
 
@@ -180,7 +181,7 @@ class Event extends Model
     public function isAllCommitChecklistFulfilled()
     {
         foreach ($this->getCommitChecklist() as $checkItem) {
-            if (!$checkItem['is_fulfilled']) {
+            if (! $checkItem['is_fulfilled']) {
                 return false;
             }
         }

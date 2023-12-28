@@ -1,0 +1,9 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "method_chaining_indentation": true,
+        "concat_space": {
+            "spacing": "none"
+        }
+    }
+}

@@ -16,13 +16,12 @@ class OptionPolicy
     private $messages = [
         'not_the_owner' => 'You are not the owner of this option',
         'not_the_event_owner' => 'You are not the owner of this event',
-        'event_is_committed' => 'This event has been committed'
+        'event_is_committed' => 'This event has been committed',
     ];
 
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function viewAny(User $user)
@@ -33,8 +32,6 @@ class OptionPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function view(User $user, Option $option)
@@ -53,7 +50,6 @@ class OptionPolicy
     /**
      * Determine whether the user can create models.
      *
-     * @param  \App\Models\User  $user
      * @param  \App\Models\Event  $event The event that the option belongs to.
      * @return \Illuminate\Auth\Access\Response|bool
      */
@@ -77,8 +73,6 @@ class OptionPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function update(User $user, Option $option)
@@ -101,8 +95,6 @@ class OptionPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function delete(User $user, Option $option)
@@ -125,8 +117,6 @@ class OptionPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function restore(User $user, Option $option)
@@ -137,8 +127,6 @@ class OptionPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Option  $option
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function forceDelete(User $user, Option $option)
@@ -149,9 +137,9 @@ class OptionPolicy
     /**
      * Determine whether the user can access the option image.
      *
-     * @param \App\Models\User $user The user who is trying to access the image.
-     * @param \App\Models\Option $option The option that the image belongs to.
-     * @param \Illuminate\Support\Facades\Request $request The request object. Used to get the voter's credentials (`voterId` and `token`).
+     * @param  \App\Models\User  $user The user who is trying to access the image.
+     * @param  \App\Models\Option  $option The option that the image belongs to.
+     * @param  \Illuminate\Support\Facades\Request  $request The request object. Used to get the voter's credentials (`voterId` and `token`).
      */
     public function getImage(?User $user, Option $option, $request = null)
     {

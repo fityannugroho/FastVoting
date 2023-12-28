@@ -41,15 +41,13 @@ class VoterController extends Controller
     /**
      * Display a listing of the voter.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Event $event
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request, Event $event)
     {
         $this->authorize('viewAny', [Voter::class, $event]);
 
-        $data['title'] = 'Voters | ' . config('app.name');
+        $data['title'] = 'Voters | '.config('app.name');
         $data['event'] = $event;
 
         return view('pages.voters', $data);
@@ -69,7 +67,6 @@ class VoterController extends Controller
      * Store a newly created voter in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
     public function store(VoterPostRequest $request, Event $event)
@@ -94,7 +91,6 @@ class VoterController extends Controller
     /**
      * Display the specified voter.
      *
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Http\Response
      */
     public function show(Voter $voter)
@@ -105,7 +101,6 @@ class VoterController extends Controller
     /**
      * Show the form for editing the specified voter.
      *
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Http\Response
      */
     public function edit(Voter $voter)
@@ -116,8 +111,6 @@ class VoterController extends Controller
     /**
      * Update the specified voter in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Voter $voter)
@@ -128,7 +121,6 @@ class VoterController extends Controller
     /**
      * Remove the specified voter from storage.
      *
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Http\Response
      */
     public function destroy(Voter $voter)

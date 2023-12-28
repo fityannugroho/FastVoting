@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class DashboardController extends Controller
 {
     /**
@@ -30,7 +28,7 @@ class DashboardController extends Controller
             return $this->admin();
         }
 
-        $data['title'] = 'Dashboard | ' . config('app.name');
+        $data['title'] = 'Dashboard | '.config('app.name');
         $data['events'] = $user->events;
 
         return view('pages.dashboard', $data);
@@ -43,7 +41,7 @@ class DashboardController extends Controller
      */
     protected function admin()
     {
-        $data['title'] = 'Dashboard Admin | ' . config('app.name');
+        $data['title'] = 'Dashboard Admin | '.config('app.name');
         $data['users'] = \App\Models\User::all()->sortBy('name');
 
         return view('pages.dashboard-admin', $data);

@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -48,8 +47,8 @@ class DatabaseSeeder extends Seeder
      * Create some events.
      * If `userId` is not specified, the event's creator will be picked randomly.
      *
-     * @param int $amount The amount of events to create.
-     * @param string $userId The user's ID.
+     * @param  int  $amount The amount of events to create.
+     * @param  string  $userId The user's ID.
      */
     private function createEvents(int $amount = 2, string $userId = '')
     {
@@ -62,7 +61,7 @@ class DatabaseSeeder extends Seeder
      * Create an event.
      * If `userId` is not specified, the event's creator will be picked randomly.
      *
-     * @param string $userId The user's ID.
+     * @param  string  $userId The user's ID.
      */
     private function createEvent(string $userId = '')
     {

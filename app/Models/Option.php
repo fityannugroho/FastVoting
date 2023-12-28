@@ -33,7 +33,7 @@ class Option extends Model
         'event_id',
         'name',
         'description',
-        'image_location'
+        'image_location',
     ];
 
     /**
@@ -73,7 +73,7 @@ class Option extends Model
         // Delete the image before deleting the option (if exist).
         static::deleting(function ($option) {
             if (isset($option->image_location)) {
-                $imagePath = storage_path('app/' . self::IMAGE_STORAGE_PATH . '/' . $option->image_location);
+                $imagePath = storage_path('app/'.self::IMAGE_STORAGE_PATH.'/'.$option->image_location);
 
                 if (file_exists($imagePath)) {
                     unlink($imagePath);

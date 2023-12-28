@@ -44,7 +44,6 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -60,7 +59,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $data['title'] = $user->name . ' | ' . config('app.name');
+        $data['title'] = $user->name.' | '.config('app.name');
         $data['user'] = $user;
 
         return view('pages.user-detail', $data);
@@ -80,7 +79,6 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\User
      * @return \Illuminate\Http\Response
      */

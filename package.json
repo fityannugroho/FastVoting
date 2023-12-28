@@ -2,6 +2,8 @@
     "name": "fastvoting",
     "private": true,
     "scripts": {
+        "lint": "./vendor/bin/pint --test",
+        "lint:fix": "./vendor/bin/pint",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",

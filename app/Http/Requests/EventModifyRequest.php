@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class EventModifyRequest extends FormRequest
 {
-    use TrixEditorValidation, TimeConverter;
+    use TimeConverter, TrixEditorValidation;
 
     /**
      * Determine if the user is authorized to make this request.

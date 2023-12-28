@@ -5,13 +5,13 @@ namespace App\Traits;
 trait TrixEditorValidation
 {
     private array $trixEditorTags = [
-        '<div>', '<strong>', '<em>', '<p>', '<a>', '<del>', '<br>', '<pre>', '<blockquote>', '<ul>', '<ol>', '<li>'
+        '<div>', '<strong>', '<em>', '<p>', '<a>', '<del>', '<br>', '<pre>', '<blockquote>', '<ul>', '<ol>', '<li>',
     ];
 
     /**
      * Validate the given input from trix editor.
      *
-     * @param string|null $input The input to validate.
+     * @param  string|null  $input The input to validate.
      * @return string The validated input.
      */
     public function validateTrixInput($input): string

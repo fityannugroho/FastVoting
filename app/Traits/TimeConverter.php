@@ -10,8 +10,8 @@ trait TimeConverter
     /**
      * Convert string time to server time that defined in config.
      *
-     * @param string|null $time The time to convert.
-     * @param string|null $timezone If `null`, the timezone will be assumed to 'UTC'.
+     * @param  string|null  $time The time to convert.
+     * @param  string|null  $timezone If `null`, the timezone will be assumed to 'UTC'.
      * @return Carbon|null The converted time, or `null` if the time is `null` or the timezone is invalid.
      */
     public function convertStringTimeToServerTime(?string $time, $timezone = null)

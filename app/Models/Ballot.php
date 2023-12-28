@@ -34,7 +34,7 @@ class Ballot extends Model
      * @var array<int, string>
      */
     protected $hidden = [
-        'voter_id'
+        'voter_id',
     ];
 
     /**
@@ -43,7 +43,7 @@ class Ballot extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'voted_at' => 'datetime'
+        'voted_at' => 'datetime',
     ];
 
     /**

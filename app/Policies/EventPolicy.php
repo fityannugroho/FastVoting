@@ -15,13 +15,12 @@ class EventPolicy
      */
     private $messages = [
         'not_the_owner' => 'You are not the owner of this event',
-        'event_is_committed' => 'This event has been committed'
+        'event_is_committed' => 'This event has been committed',
     ];
 
     /**
      * Determine whether the user can view any events.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function viewAny(User $user)
@@ -32,8 +31,6 @@ class EventPolicy
     /**
      * Determine whether the user can view the event.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function view(User $user, Event $event)
@@ -57,7 +54,6 @@ class EventPolicy
     /**
      * Determine whether the user can create events.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function create(User $user)
@@ -68,8 +64,6 @@ class EventPolicy
     /**
      * Determine whether the user can update the events.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function update(User $user, Event $event)
@@ -92,8 +86,6 @@ class EventPolicy
     /**
      * Determine whether the user can delete the event.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function delete(User $user, Event $event)
@@ -112,8 +104,6 @@ class EventPolicy
     /**
      * Determine whether the user can restore the event.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function restore(User $user, Event $event)
@@ -124,8 +114,6 @@ class EventPolicy
     /**
      * Determine whether the user can permanently delete the event.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Event  $event
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function forceDelete(User $user, Event $event)

@@ -16,13 +16,12 @@ class VoterPolicy
     private $messages = [
         'not_the_owner' => 'You are not the owner of this voter',
         'not_the_event_owner' => 'You are not the owner of this event',
-        'event_is_committed' => 'This event has been committed'
+        'event_is_committed' => 'This event has been committed',
     ];
 
     /**
      * Determine whether the user can view any models.
      *
-     * @param  \App\Models\User  $user
      * @param  \App\Models\Event  $event The event that the voter belongs to.
      * @return \Illuminate\Auth\Access\Response|bool
      */
@@ -51,8 +50,6 @@ class VoterPolicy
     /**
      * Determine whether the user can view the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function view(User $user, Voter $voter)
@@ -63,7 +60,6 @@ class VoterPolicy
     /**
      * Determine whether the user can create models.
      *
-     * @param  \App\Models\User  $user
      * @param  \App\Models\Event  $event The event that the voter belongs to.
      * @return \Illuminate\Auth\Access\Response|bool
      */
@@ -87,8 +83,6 @@ class VoterPolicy
     /**
      * Determine whether the user can update the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function update(User $user, Voter $voter)
@@ -99,8 +93,6 @@ class VoterPolicy
     /**
      * Determine whether the user can delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function delete(User $user, Voter $voter)
@@ -123,8 +115,6 @@ class VoterPolicy
     /**
      * Determine whether the user can restore the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function restore(User $user, Voter $voter)
@@ -135,8 +125,6 @@ class VoterPolicy
     /**
      * Determine whether the user can permanently delete the model.
      *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\Voter  $voter
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function forceDelete(User $user, Voter $voter)

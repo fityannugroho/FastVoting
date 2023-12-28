@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
 use App\Models\Voter;
 use Illuminate\Http\Request;
 
@@ -29,7 +28,7 @@ class VoteController extends Controller
     {
         $voter = Voter::find($voterId);
 
-        $data['title'] = 'Voting | '. config('app.name');
+        $data['title'] = 'Voting | '.config('app.name');
         $data['voter'] = $voter;
 
         return view('pages.vote', $data);
@@ -38,8 +37,6 @@ class VoteController extends Controller
     /**
      * Save the vote
      *
-     * @param Request $request
-     * @param string $voterId
      * @return \Illuminate\Http\RedirectResponse
      */
     public function vote(Request $request, string $voterId)
@@ -68,8 +65,6 @@ class VoteController extends Controller
     /**
      * Go to the result page
      *
-     * @param Request $request
-     * @param string $voterId
      * @return \Illuminate\Http\RedirectResponse
      */
     public function result(Request $request, string $voterId)
@@ -81,7 +76,7 @@ class VoteController extends Controller
             return redirect()->route('vote', ['voterId' => $voter->id, 'token' => $voter->token]);
         }
 
-        $data['title'] = ($voter->event->finished_at->isFuture() ? 'Real-Count' : 'Voting Result') . ' of ' . $voter->event->title . ' | ' . config('app.name');
+        $data['title'] = ($voter->event->finished_at->isFuture() ? 'Real-Count' : 'Voting Result').' of '.$voter->event->title.' | '.config('app.name');
         $data['voter'] = $voter;
         $data['event'] = $voter->event;
 

@@ -45,7 +45,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        $data['title'] = 'Login | ' . config('app.name');
+        $data['title'] = 'Login | '.config('app.name');
 
         return view('auth.login', $data);
     }

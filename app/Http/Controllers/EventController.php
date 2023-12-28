@@ -25,7 +25,6 @@ class EventController extends Controller
     /**
      * Display a listing of the event.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
@@ -43,14 +42,14 @@ class EventController extends Controller
      */
     public function create()
     {
-        $data['title'] = 'Add new event | ' . config('app.name');
+        $data['title'] = 'Add new event | '.config('app.name');
+
         return view('pages.event-add', $data);
     }
 
     /**
      * Store a newly created event in storage.
      *
-     * @param  \App\Http\Requests\EventModifyRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(EventModifyRequest $request)
@@ -61,7 +60,7 @@ class EventController extends Controller
         // Create a new event.
         $event = Event::create($validatedData);
 
-        if (!isset($event)) {
+        if (! isset($event)) {
             return redirect()->back()->with('error', 'Failed creating new event.');
         }
 
@@ -71,12 +70,12 @@ class EventController extends Controller
     /**
      * Display the specified event.
      *
-     * @param  \App\Models\Event $event The event to display.
+     * @param  \App\Models\Event  $event The event to display.
      * @return \Illuminate\Http\Response
      */
     public function show(Event $event)
     {
-        $data['title'] = 'Event detail | ' . config('app.name');
+        $data['title'] = 'Event detail | '.config('app.name');
         $data['event'] = $event;
 
         return view('pages.event-detail', $data);
@@ -85,12 +84,12 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified event.
      *
-     * @param  \App\Models\Event $event The event to edit.
+     * @param  \App\Models\Event  $event The event to edit.
      * @return \Illuminate\Http\Response
      */
     public function edit(Event $event)
     {
-        $data['title'] = 'Edit event | ' . config('app.name');
+        $data['title'] = 'Edit event | '.config('app.name');
         $data['event'] = $event;
 
         return view('pages.event-edit', $data);
@@ -99,8 +98,7 @@ class EventController extends Controller
     /**
      * Update the specified event in storage.
      *
-     * @param  \App\Http\Requests\EventModifyRequest $request
-     * @param  \App\Models\Event $event The event to edit.
+     * @param  \App\Models\Event  $event The event to edit.
      * @return \Illuminate\Http\Response
      */
     public function update(EventModifyRequest $request, Event $event)
@@ -115,7 +113,7 @@ class EventController extends Controller
     /**
      * Remove the specified event from storage.
      *
-     * @param  \App\Models\Event $event The event to delete.
+     * @param  \App\Models\Event  $event The event to delete.
      * @return \Illuminate\Http\Response
      */
     public function destroy(Event $event)
@@ -132,7 +130,7 @@ class EventController extends Controller
     /**
      * Commit the event
      *
-     * @param  \App\Models\Event $event The event to commit.
+     * @param  \App\Models\Event  $event The event to commit.
      */
     public function commit(Event $event)
     {
@@ -156,7 +154,7 @@ class EventController extends Controller
         }
 
         if ($failedDelivery > 0) {
-            return redirect()->route('events.show', ['event' => $event])->with('error', 'Failed sending email to ' . $failedDelivery . ' voters.');
+            return redirect()->route('events.show', ['event' => $event])->with('error', 'Failed sending email to '.$failedDelivery.' voters.');
         }
 
         return redirect()->route('events.show', ['event' => $event])->with('success', 'Voting invitation email has been sent to all voters.');
