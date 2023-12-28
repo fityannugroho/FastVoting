@@ -160,20 +160,6 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
-                            {{-- Option Image --}}
-                            @if($option->image_location)
-                                <div class="col-4 option-item__image-frame">
-                                    <img class="option-item__image" src="{{ route('options.image', ['option' => $option]) }}" alt="{{ $option->name }}">
-                                </div>
-                            @else
-                                <div class="col-4 option-item__image-frame">
-                                    <img class="option-item__image" src="{{ asset('assets/image-option.jpg') }}" alt="">
-                                </div>
-                            @endif
-                        </div>
-=======
->>>>>>> f07ca31c85face0056352ac88ab7c44a110be917
                     </div>
                 @endforeach
             </div>
