@@ -201,7 +201,7 @@
     @if ($event->isEditable())
         <section class="mb-4">
             <h2>{{ __('Commit Event') }}</h2>
-            <div class="p-3 bg-white border mt-3">
+            <div class="p-3 border mt-3">
                 <p>Commit this event to start the voting at the time you specify. We will send a voting link to each voter's email.</p>
                 <p>Before commit, make sure you fulfill this requirement:</p>
                 <ul>
@@ -235,7 +235,7 @@
     @if ($event->isAuthorized())
         <section class="mb-4">
             <h2>{{ __('Delete Event') }}</h2>
-            <div class="p-3 bg-white border border-danger mt-3">
+            <div class="p-3 border border-danger mt-3">
                 <p><span class="text-danger fw-bold">Warning!</span> You <strong>can't undo</strong> this action.<br>All event data, options, voters and ballots <strong>will be lost</strong>.</p>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Delete Event</button>
             </div>

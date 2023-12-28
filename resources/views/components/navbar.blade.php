@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md bg-body shadow-sm">
     <div class="container">
         <a href="{{ route('home') }}" class="text-decoration-none d-flex gap-2 align-items-center me-3">
             <img src="{{ asset('assets/logo.png') }}" height="32" alt="{{ config('app.name') }} logo" loading="lazy" />
@@ -45,6 +45,27 @@
                         </div>
                     </li>
                 @endguest
+                {{-- Theme dropdown --}}
+                <li class="nav-item dropdown ms-md-2">
+                    <button id="themeDropdown" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <i class="fa-solid fa-sun fa-lg"></i>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                        <button class="dropdown-item" id="btnLight">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>Light</span>
+                        </button>
+                        <button class="dropdown-item" id="btnDark">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                        <button class="dropdown-item" id="btnAuto">
+                            <i class="fa-solid fa-adjust"></i>
+                            <span>Auto</span>
+                        </button>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

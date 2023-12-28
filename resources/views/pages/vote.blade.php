@@ -16,7 +16,7 @@
         </div>
 
         @if ($voter->event->started_at->isFuture())
-            <div class="p-3 bg-white border border-danger text-center">
+            <div class="p-3 border border-danger text-center">
                 <span class="text-danger">This vote is not opened yet.</span>
             </div>
         @endif
