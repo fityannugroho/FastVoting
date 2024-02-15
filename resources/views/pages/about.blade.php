@@ -46,7 +46,7 @@
                 </div>
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ Vite::image('Arif.png')}}" alt="Arif Hendrawan Priliyanto" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('arif.png')}}" alt="Arif Hendrawan Priliyanto" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Arif Hendrawan Priliyanto</h5>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ Vite::image('Aqram.png')}}" alt="Khairul Aqram" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('aqram.png')}}" alt="Khairul Aqram" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Khairul Aqram</h5>
