@@ -10,8 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title ?? config('app.name') }}</title>
-    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
-    <link rel="apple-touch-icon" href="{{ asset('assets/logo.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ Vite::image('logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ Vite::image('logo.png') }}">
     <link rel="manifest" href="{{ asset('web-manifest.json') }}">
 
     <!-- Scripts -->

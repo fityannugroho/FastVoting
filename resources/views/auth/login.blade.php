@@ -4,7 +4,7 @@
     <div class="container py-4">
         <div class="row">
             <div class="col-0 col-lg-6 d-none d-lg-block p-4">
-                <img src="{{ asset('assets/undraw_onboarding_re_6osc.png') }}" alt="Register" class="img-col" height="auto">
+                <img src="{{ Vite::image('undraw_onboarding_re_6osc.png') }}" alt="Register" class="img-col" height="auto">
             </div>
             <div class="col-12 col-lg-6">
                 <h1>Welcome back to <span class="text-primary">{{ config('app.name') }}</span></h1>

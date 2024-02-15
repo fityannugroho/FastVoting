@@ -1,6 +1,9 @@
 import "./bootstrap";
 import "../sass/app.scss";
 
+// Import static assets
+import.meta.glob(["../images/**"]);
+
 const navbarToggler = document.querySelector(".navbar-toggler");
 
 // Change navbar toggler icon when clicked.

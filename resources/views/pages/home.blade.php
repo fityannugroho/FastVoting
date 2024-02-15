@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="subjumbotron col-md-12 col-lg-6">
-            <img class="img-col" src="{{ asset('assets/undraw_voting_nvu7.png') }}" alt="">
+            <img class="img-col" src="{{ Vite::image('undraw_voting_nvu7.png') }}" alt="">
         </div>
     </div>
     <section class="container-home mb-5">

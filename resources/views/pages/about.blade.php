@@ -30,7 +30,7 @@
             <div class="team-list">
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ asset('assets/fityan.png')}}" alt="Fityandhiya Islam Nugroho" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('fityan.png')}}" alt="Fityandhiya Islam Nugroho" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Fityandhiya Islam Nugroho</h5>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ asset('assets/Arif.png')}}" alt="Arif Hendrawan Priliyanto" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('Arif.png')}}" alt="Arif Hendrawan Priliyanto" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Arif Hendrawan Priliyanto</h5>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ asset('assets/Aqram.png')}}" alt="Khairul Aqram" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('Aqram.png')}}" alt="Khairul Aqram" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Khairul Aqram</h5>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="team-item">
                     <div class="team-item__header">
-                        <img src="{{ asset('assets/sea.png')}}" alt="Physco Sea Raflisoghi" class="team-item__header__image"/>
+                        <img src="{{ Vite::image('sea.png')}}" alt="Physco Sea Raflisoghi" class="team-item__header__image"/>
                     </div>
                     <div class="team-item__body">
                         <h5 class="team-item__body__name">Physco Sea Raflisoghi</h5>
