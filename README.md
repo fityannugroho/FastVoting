@@ -8,16 +8,18 @@
 4. Configure the `.env` file with your **database connection**, **seeder configuration**, **mailer**, etc.
 5. Generate the application key with `php artisan key:generate` command.
 6. Generate the database structure with this commands based on your preferences:
-   - Use **`php artisan migrate`** for [creating / updating the database](https://laravel.com/docs/10.x/migrations).
-   - Use **`php artisan db:seed`** for [seeding the database](https://laravel.com/docs/10.x/seeding#running-seeders).
-   - Use `php artisan migrate:fresh` for fresh installation.
-   - Use `php artisan migrate:fresh --seed` for fresh installation and seeding the database.
+
+    - Use **`php artisan migrate`** for [creating / updating the database](https://laravel.com/docs/10.x/migrations).
+    - Use **`php artisan db:seed`** for [seeding the database](https://laravel.com/docs/10.x/seeding#running-seeders).
+    - Use `php artisan migrate:fresh` for fresh installation.
+    - Use `php artisan migrate:fresh --seed` for fresh installation and seeding the database.
 
     > **Warning!** If you use `php artisan migrate:fresh` command, all tables will be dropped and recreated. **All data in the tables will be lost**.
 
-7. Generate the app resources (public assets, like: styles, scripts, etc.) with Laravel Mix.
-   - In **development**, use `npm run dev` command. For watching the file changes (**watch mode**), use `npm run watch` command instead.
-   - In **production**, use `npm run prod` command.
+7. Generate the app resources (public assets, like: styles, scripts, etc.)
+
+    - In **development**, use `npm run dev` command.
+    - In **production**, use `npm run prod` command.
 
     > Note: Before **running in watch mode**, you need to start the application first.
 
@@ -26,9 +28,10 @@
 ## Installation with Docker
 
 [Laravel Sail](https://laravel.com/docs/10.x/sail) is used to help dockerize this app easily. Laravel Sail is supported on:
-- macOS
-- Linux
-- Windows (via [WSL2](https://learn.microsoft.com/en-us/windows/wsl))
+
+-   macOS
+-   Linux
+-   Windows (via [WSL2](https://learn.microsoft.com/en-us/windows/wsl))
 
 ### Prerequisites
 
@@ -40,8 +43,8 @@ Please go to the [Docker installation guide](https://docs.docker.com/engine/inst
 
 The [docker-compose.yml](docker-compose.yml) file is used to define the app's services, consist of:
 
-- `laravel.test` - the app container, which is based on [Laravel Sail's PHP 8.2 image](https://hub.docker.com/r/laravelsail/php82-composer).
-- `mysql` - the database container,  which is based on [MySQL Server 8.0 image](https://hub.docker.com/r/mysql/mysql-server/tags?name=8.0).
+-   `laravel.test` - the app container, which is based on [Laravel Sail's PHP 8.2 image](https://hub.docker.com/r/laravelsail/php82-composer).
+-   `mysql` - the database container, which is based on [MySQL Server 8.0 image](https://hub.docker.com/r/mysql/mysql-server/tags?name=8.0).
 
 ### Steps
 
@@ -72,7 +75,7 @@ The [docker-compose.yml](docker-compose.yml) file is used to define the app's se
     ./vendor/bin/sail up -d
     ```
 
-    This command will download and install the container images that defined in [docker-compose.yml](../docker-compose.yml) if not exists, then start the app container (include the database container).
+    This command will download and install the container images that defined in [docker-compose.yml](docker-compose.yml) if not exists, then start the app container (include the database container).
 
     > To **stop the app**, use `./vendor/bin/sail down` command.
 
