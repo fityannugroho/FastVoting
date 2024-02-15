@@ -17,9 +17,6 @@
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
 
-    {{-- Font-Awesome Icons --}}
-    <script src="{{ asset('vendor/fontawesome/fontawesome-icons.min.js') }}" defer></script>
-
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div id="app">

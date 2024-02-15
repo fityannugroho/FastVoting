@@ -1,5 +1,6 @@
 import "./bootstrap";
 import "../sass/app.scss";
+import "./fontawesome/fontawesome-icons.min";
 
 // Import static assets
 import.meta.glob(["../images/**"]);
