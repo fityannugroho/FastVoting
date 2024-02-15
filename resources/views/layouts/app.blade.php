@@ -15,13 +15,7 @@
     <link rel="manifest" href="{{ asset('web-manifest.json') }}">
 
     <!-- Scripts -->
-    <!-- <script src="{{ mix('js/manifest.js') }}" defer></script>
-    <script src="{{ mix('js/vendor.js') }}" defer></script>
-    <script src="{{ mix('js/app.js') }}" defer></script> -->
     @vite(['resources/js/app.js'])
-
-    <!-- Styles -->
-    <!-- <link href="{{ asset('') }}" rel="stylesheet"> -->
 
     {{-- Font-Awesome Icons --}}
     <script src="{{ asset('vendor/fontawesome/fontawesome-icons.min.js') }}" defer></script>
