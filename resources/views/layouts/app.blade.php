@@ -17,6 +17,10 @@
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
 
+    <!-- Import Trix Editor, Usage: `<trix-editor input="x"></trix-editor>` -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.10/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.10/dist/trix.umd.min.js" defer></script>
+
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div id="app">
