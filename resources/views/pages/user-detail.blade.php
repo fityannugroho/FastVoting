@@ -72,7 +72,7 @@
                 @endforeach
             </div>
         @else
-            <div class="text-center border p-4 bg-light">
+            <div class="text-center border p-4">
                 <p class="text-muted mb-0">There are not any events</p>
             </div>
         @endif

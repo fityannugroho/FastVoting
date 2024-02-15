@@ -23,13 +23,6 @@ $color-mode-type: data;
 
 $color-mode-type: media-query;
 
-@include color-mode(dark) {
-    .element {
-        color: var(--bs-primary-text-emphasis);
-        background-color: var(--bs-primary-bg-subtle);
-    }
-}
-
 .app-link,
 .breadcrumb-item a {
     color: $primary;
@@ -121,14 +114,7 @@ $color-mode-type: media-query;
 
 .event-item,
 .user-item {
-    color: $black;
     text-decoration: none;
-}
-
-.event-item:hover,
-.user-item:hover {
-    color: $black;
-    background-color: $gray-100;
 }
 
 .event-item__description {

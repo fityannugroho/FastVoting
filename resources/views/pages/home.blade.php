@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row jumbotron py-4 mx-0 mb-4">
+    <div class="row jumbotron py-5 mx-0 mb-4">
         <div class="subjumbotron col-md-12 col-lg-6 mb-4">
             <h1>Make your voting event feel easy</h1>
             <p>Planning easier, practical and faster. You can determine who can vote without breaking from fraud.</p>
