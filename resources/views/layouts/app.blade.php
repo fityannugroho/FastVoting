@@ -10,20 +10,15 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ $title ?? config('app.name') }}</title>
-    <link rel="icon" type="image/x-icon" href="/assets/logo.png">
-    <link rel="apple-touch-icon" href="{{ asset('assets/logo.png') }}">
-    <link rel="manifest" href="{{ asset('web-manifest.json') }}">
+    <link rel="icon" type="image/x-icon" href="{{ Vite::image('logo.png') }}">
+    <link rel="apple-touch-icon" href="{{ Vite::image('logo.png') }}">
 
     <!-- Scripts -->
-    <script src="{{ mix('js/manifest.js') }}" defer></script>
-    <script src="{{ mix('js/vendor.js') }}" defer></script>
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    @vite(['resources/js/app.js'])
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    {{-- Font-Awesome Icons --}}
-    <script src="{{ asset('vendor/fontawesome/fontawesome-icons.min.js') }}" defer></script>
+    <!-- Import Trix Editor, Usage: `<trix-editor input="x"></trix-editor>` -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.10/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.10/dist/trix.umd.min.js" defer></script>
 
 </head>
 <body class="d-flex flex-column min-vh-100">

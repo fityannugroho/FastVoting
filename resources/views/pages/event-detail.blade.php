@@ -132,7 +132,7 @@
                                     <img src="{{ route('options.image', ['option' => $option]) }}" class="option-item__image" alt="{{ $option->name }}">
                                 @else
                                     {{-- Default image --}}
-                                    <img src="{{ asset('assets/image-option.jpg') }}" class="option-item__image" alt="No image">
+                                    <img src="{{ Vite::image('image-option.jpg') }}" class="option-item__image" alt="No image">
                                 @endif
                             </div>
                             {{-- Option Name --}}

@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="subjumbotron col-md-12 col-lg-6">
-            <img class="img-col" src="{{ asset('assets/undraw_voting_nvu7.png') }}" alt="">
+            <img class="img-col" src="{{ Vite::image('undraw_voting_nvu7.png') }}" alt="">
         </div>
     </div>
     <section class="container-home mb-5">
@@ -18,19 +18,19 @@
         <div class="d-flex flex-wrap justify-content-center gap-4 text-center">
             <div class="card my-2 p-3" style="width: 16rem;">
                 <div class="card-body">
-                    <img class="img-fluid mb-3" src="{{asset('assets/undraw_onboarding_re_6osc.png')}}" alt="">
+                    <img class="img-fluid mb-3" src="{{ Vite::image('undraw_onboarding_re_6osc.png') }}" alt="">
                     <span class="fs-5">Easier & practical</span>
                 </div>
             </div>
             <div class="card my-2 p-3" style="width: 16rem;">
                 <div class="card-body">
-                    <img class="img-fluid mb-3" src="{{asset('assets/undraw_connected_re_lmq2.png')}}" alt="">
+                    <img class="img-fluid mb-3" src="{{ Vite::image('undraw_connected_re_lmq2.png') }}" alt="">
                     <span class="fs-5">Selectpicker</span>
                 </div>
             </div>
             <div class="card my-2 p-3" style="width: 16rem;">
                 <div class="card-body">
-                    <img class="img-fluid mb-3" src="{{asset('assets/undraw_add_files_re_v09g.png')}}" alt="">
+                    <img class="img-fluid mb-3" src="{{ Vite::image('undraw_add_files_re_v09g.png') }}" alt="">
                     <span class="fs-5">Easy to add options</span>
                 </div>
             </div>

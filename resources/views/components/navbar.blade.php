@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md bg-body shadow-sm">
     <div class="container">
         <a href="{{ route('home') }}" class="text-decoration-none d-flex gap-2 align-items-center me-3">
-            <img src="{{ asset('assets/logo.png') }}" height="32" alt="{{ config('app.name') }} logo" loading="lazy" />
+            <img src="{{ Vite::image('logo.png') }}" height="32" alt="{{ config('app.name') }} logo" loading="lazy" />
             <span class="font-weight-bold text-primary fs-5">{{ config('app.name') }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
